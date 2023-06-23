@@ -1,10 +1,11 @@
 :root {
     --left-panel-width: 300px;
     --bottom-panel-height: 200px;
+    --border-color-primary: rgb(91, 111, 170);
 }
 
 .left-panel, .bottom-panel {
-    background: white;
+    background: rgb(23, 23, 23);
 }
 
 .left-panel {
@@ -12,7 +13,7 @@
     top: 0;
     left: 0;
     height: calc(100vh - var(--bottom-panel-height));
-    border-right: 3px solid red;
+    border-right: 2.5px solid var(--border-color-primary);
     width: var(--left-panel-width);
 }
 
@@ -21,16 +22,20 @@
     top: calc(100vh - var(--bottom-panel-height));
     left: 0;
     width: 100vw;
-    border-top: 3px solid red;
+    border-top: 2.5px solid var(--border-color-primary);
     height: var(--bottom-panel-height);
 }
 
 .primary-content {
     position: fixed;
-    top: 5px;
-    right: 5px;
-    width: calc(100vw - var(--left-panel-width) - 10px);
-    height: calc(100vh - var(--bottom-panel-height) - 10px);
-    background: green;
-    outline: 5px solid orange;
+    top: 0;
+    right: 0;
+    width: calc(100vw - var(--left-panel-width));
+    height: calc(100vh - var(--bottom-panel-height));
+    background: rgb(26, 26, 26);
 }
+
+h1, h2, h3 { font-weight: 300; margin: 0; }
+h1 { font-size: 40px; }
+h2 { font-size: 30px; }
+h3 { font-size: 20px; }
