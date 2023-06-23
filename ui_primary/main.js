@@ -2,7 +2,7 @@ const resizeConfig = {
     preserveAspectRatio: false,
     edges: { left: false, right: false, bottom: false, top: false },
     margin: 5,
-    restrictSize: { min: { width: 200, height: 200 }, max: { width: 500, height: 500 } }
+    restrictSize: { min: { width: 200, height: 250 }, max: { width: 500, height: 500 } }
 }
 
 for (const edge of Object.keys(resizeConfig.edges)) {

@@ -1,6 +1,8 @@
+@import url(views/controlpanel.css);
+
 :root {
     --left-panel-width: 300px;
-    --bottom-panel-height: 200px;
+    --bottom-panel-height: 250px;
     --border-color-primary: rgb(91, 111, 170);
 }
 
