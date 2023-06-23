@@ -1,36 +1,20 @@
-var musicChannelElm = document.getElementById("music-channel");
-var mic1ChannelElm = document.getElementById("mic1-channel");
-var mic2ChannelElm = document.getElementById("mic2-channel");
+function makeChannel(channelName) {
+    var elm = document.querySelector(`#${channelName}-channel`);
+    var channel = {
+        elm,
+        volumeFill: elm.querySelector(".channel-volume-fill"),
+        volumeGrabber: elm.querySelector(".channel-volume-grabber"),
+        volume: 0,
+        output: 0
+    }
 
-var musicChannelVolumeFill = musicChannelElm.querySelector(".channel-volume-fill");
-var mic1ChannelVolumeFill = mic1ChannelElm.querySelector(".channel-volume-fill");
-var mic2ChannelVolumeFill = mic2ChannelElm.querySelector(".channel-volume-fill");
-
-var musicChannelVolumeGrabber = musicChannelElm.querySelector(".channel-volume-grabber");
-var mic1ChannelVolumeGrabber = mic1ChannelElm.querySelector(".channel-volume-grabber");
-var mic2ChannelVolumeGrabber = mic2ChannelElm.querySelector(".channel-volume-grabber");
-
-var musicChannel = {
-    elm: musicChannelElm,
-    volumeFill: musicChannelVolumeFill,
-    volumeGrabber: musicChannelVolumeGrabber,
-    volume: 0
+    setChannelVolume(channel, 75);
+    return channel;
 }
 
-var mic1Channel = {
-    elm: mic1ChannelElm,
-    volumeFill: mic1ChannelVolumeFill,
-    volumeGrabber: mic1ChannelVolumeGrabber,
-    volume: 0
-}
-
-var mic2Channel = {
-    elm: mic2ChannelElm,
-    volumeFill: mic2ChannelVolumeFill,
-    volumeGrabber: mic2ChannelVolumeGrabber,
-    volume: 0,
-    output: 0
-}
+var musicChannel = makeChannel("music");
+var mic1Channel = makeChannel("mic1");
+var mic2Channel = makeChannel("mic2");
 
 function setChannelVolume(channel, volume) {
     channel.volume = volume;
@@ -48,10 +32,6 @@ function updateChannelVolumeFill(channel, volume) {
     channel.volumeFill.style.height = newVolume + "%";
 }
 
-document.onmousedown = (e) => {
-    console.log(e.y);
-}
-
 function addGrabberListener(channel) {
     channel.volumeGrabber.addEventListener('mousedown', (e) => {
         var volumeParent = channel.volumeGrabber.parentNode;
@@ -63,7 +43,6 @@ function addGrabberListener(channel) {
             var newVolume = 100 - ((mouseY - topOfParent) / (bottomOfParent - topOfParent)) * 100;
             newVolume = Math.max(0, Math.min(100, newVolume));
             setChannelVolume(channel, newVolume);
-            console.log(newVolume);
         }
 
         var mouseUpListener = (e) => {
@@ -79,8 +58,6 @@ function addGrabberListener(channel) {
 addGrabberListener(musicChannel);
 addGrabberListener(mic1Channel);
 addGrabberListener(mic2Channel);
-
-setChannelVolume(musicChannel, 50);
 
 var t = 0;
 setInterval(() => {
