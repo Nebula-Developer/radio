@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    padding: 0;
+    margin: 0;
+}
+
+.resize-left, .resize-right,
+.resize-top, .resize-bottom {
+    touch-action: none;
+    box-sizing: border-box;
+    overflow: auto;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+.general-width-constraint {
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.general-height-constraint {
+    min-height: 200px;
+    max-height: 500px;
+}
