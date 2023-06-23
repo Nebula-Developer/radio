@@ -1,0 +1,71 @@
+.mixer {
+    display: flex;
+    position: relative;
+    background: rgba(100, 100, 100, 0.1);
+    height: 100%;
+}
+
+.channel {
+    height: 100%;
+    outline: 3px solid var(--border-color-primary);
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-left: 3px;
+}
+
+.channel-name {
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+    margin: 10px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    height: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.channel-volume {
+    position: relative;
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    outline: 1px solid white;
+    height: 45%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.channel-volume-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: rgb(95, 95, 95);
+}
+
+.channel-volume-grabber {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 1px;
+    width: calc(100% - 4px);
+    border: 1px solid white;
+    border-radius: 2px;
+    height: 3px;
+    background: silver;
+    cursor: ns-resize;
+}
+
+.channel-toggle {
+    height: 30px;
+    width: 30px;
+    margin: 10px 0;
+    background: rgba(183, 183, 183, 0.5);
+    cursor: pointer;
+    border-radius: 5px;
+}
