@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="main.js" defer></script>
+    <script src="channels.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -15,25 +16,30 @@
 
     <div class="bottom-panel resize-top variable-panel" data-variable="bottom-panel-height">
         <div class="mixer">
-            <div class="channel">
+            <div class="channel" id="music-channel">
                 <p class="channel-name">MUSIC</p>
-
                 <div class="channel-volume">
                     <div class="channel-volume-fill"></div>
                     <div class="channel-volume-grabber"></div>
                 </div>
-
                 <div class="channel-toggle"></div>
             </div>
 
-            <div class="channel">
+            <div class="channel" id="mic1-channel">
                 <p class="channel-name">MIC 1</p>
-
                 <div class="channel-volume">
                     <div class="channel-volume-fill"></div>
                     <div class="channel-volume-grabber"></div>
                 </div>
+                <div class="channel-toggle"></div>
+            </div>
 
+            <div class="channel" id="mic2-channel">
+                <p class="channel-name">MIC 2</p>
+                <div class="channel-volume">
+                    <div class="channel-volume-fill"></div>
+                    <div class="channel-volume-grabber"></div>
+                </div>
                 <div class="channel-toggle"></div>
             </div>
         </div>

@@ -1,7 +1,6 @@
 .mixer {
     display: flex;
     position: relative;
-    background: rgba(100, 100, 100, 0.1);
     height: 100%;
 }
 
@@ -31,8 +30,8 @@
 
 .channel-volume {
     position: relative;
-    width: calc(100% - 10px);
-    margin: 0 5px;
+    width: calc(100% - 16px);
+    margin: 0 8px;
     outline: 1px solid white;
     height: 45%;
     border-radius: 5px;
