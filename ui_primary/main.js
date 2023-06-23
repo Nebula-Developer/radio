@@ -22,5 +22,4 @@ function resizeMoveListener(event, widthResize) {
         var whType = widthResize ? 'width' : 'height';
         target.style[whType] = event.rect[whType] + 'px';
     }
-
 }

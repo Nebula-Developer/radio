@@ -24,3 +24,13 @@
     border-top: 3px solid red;
     height: var(--bottom-panel-height);
 }
+
+.primary-content {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: calc(100vw - var(--left-panel-width) - 10px);
+    height: calc(100vh - var(--bottom-panel-height) - 10px);
+    background: green;
+    outline: 5px solid orange;
+}
