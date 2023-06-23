@@ -1,7 +1,8 @@
 const resizeConfig = {
     preserveAspectRatio: false,
     edges: { left: false, right: false, bottom: false, top: false },
-    margin: 5
+    margin: 5,
+    restrictSize: { min: { width: 200, height: 200 }, max: { width: 500, height: 500 } }
 }
 
 for (const edge of Object.keys(resizeConfig.edges)) {
@@ -12,21 +13,14 @@ for (const edge of Object.keys(resizeConfig.edges)) {
 }
 
 function resizeMoveListener(event, widthResize) {
-    var target = event.target,
-        x = (parseFloat(target.getAttribute('data-x')) || 0),
-        y = (parseFloat(target.getAttribute('data-y')) || 0);
+    var target = event.target;
 
-    if (widthResize)
-        target.style.width  = event.rect.width + 'px';
-    else
-        target.style.height = event.rect.height + 'px';
+    if (target.classList.contains('variable-panel')) {
+        var variable = target.getAttribute('data-variable');
+        document.documentElement.style.setProperty(`--${variable}`, (widthResize ? event.rect.width : event.rect.height) + 'px');
+    } else {
+        var whType = widthResize ? 'width' : 'height';
+        target.style[whType] = event.rect[whType] + 'px';
+    }
 
-    x += event.deltaRect.left;
-    y += event.deltaRect.top;
-
-    target.style.webkitTransform = target.style.transform =
-        'translate(' + x + 'px,' + y + 'px)';
-
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
 }

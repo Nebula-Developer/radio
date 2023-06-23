@@ -1,3 +1,5 @@
+@import url(ui.css);
+
 body {
     width: 100vw;
     height: 100vh;
@@ -16,14 +18,4 @@ body {
     overflow: auto;
     min-width: 10px;
     min-height: 10px;
-}
-
-.general-width-constraint {
-    min-width: 200px;
-    max-width: 500px;
-}
-
-.general-height-constraint {
-    min-height: 200px;
-    max-height: 500px;
 }
