@@ -15,7 +15,7 @@ const createWindow = () => {
     }
   });
 
-  mainWindow.loadFile(path.resolve(path.join(__dirname, '..', 'ui_primary', 'index.html')));
+  mainWindow.loadFile(path.resolve(path.join(__dirname, '..', 'ui', 'index.html')));
   mainWindow.webContents.openDevTools();
 };
 
