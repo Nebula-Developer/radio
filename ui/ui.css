@@ -1,0 +1,44 @@
+@import url(views/controlpanel.css);
+
+:root {
+    --left-panel-width: 300px;
+    --bottom-panel-height: 250px;
+    --border-color-primary: rgb(91, 111, 170);
+}
+
+.left-panel, .bottom-panel {
+    background: rgb(23, 23, 23);
+}
+
+.left-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(100vh - var(--bottom-panel-height));
+    border-right: 2.5px solid var(--border-color-primary);
+    width: var(--left-panel-width);
+}
+
+.bottom-panel {
+    position: fixed;
+    top: calc(100vh - var(--bottom-panel-height));
+    left: 0;
+    width: 100vw;
+    border-top: 2.5px solid var(--border-color-primary);
+    height: var(--bottom-panel-height);
+}
+
+.primary-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100vw - var(--left-panel-width));
+    height: calc(100vh - var(--bottom-panel-height));
+    background: rgb(26, 26, 26);
+}
+
+h1, h2, h3 { font-weight: 300; margin: 0; }
+h1 { font-size: 40px; }
+h2 { font-size: 30px; }
+h3 { font-size: 20px; }
+p { margin: 0; font-size: 16px; }
