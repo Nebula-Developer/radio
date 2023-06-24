@@ -38,41 +38,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "BASS.NET": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
             "ManagedBass": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "ManagedBass.Enc": {
               "target": "Package",
               "version": "[3.1.1, )"
             },
             "ManagedBass.Fx": {
               "target": "Package",
               "version": "[3.1.1, )"
-            },
-            "cscore": {
-              "target": "Package",
-              "version": "[1.2.1.2, )"
-            },
-            "managedbass.asio": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "naudio": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "opentk": {
-              "target": "Package",
-              "version": "[4.7.7, )"
-            },
-            "portaudiosharp": {
-              "target": "Package",
-              "version": "[0.3.0, )"
             }
           },
           "imports": [

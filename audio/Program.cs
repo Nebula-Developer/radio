@@ -29,14 +29,17 @@ public static class Program {
         Bass.ChannelGetInfo(streamAudio[streamTo], out ChannelInfo info);
         int frequency = info.Frequency;
 
-        // Bass.ChannelSetAttribute(streamAudio[streamTo], ChannelAttribute.Frequency, 1);
-        // Bass.ChannelSlideAttribute(streamAudio[streamTo], ChannelAttribute.Frequency, frequency, audioFadeDuration);
+        // Bass.ChannelSetAttribute(streamAudio[streamTo], ChannelAttribute.Frequency, frequency / 2);
+        // Bass.ChannelSlideAttribute(streamAudio[streamTo], ChannelAttribute.Frequency, frequency, audioFadeDuration * 2);
 
 
         if (streamFrom != -1) {
+            Bass.ChannelGetInfo(streamAudio[streamFrom], out ChannelInfo infoF);
+            int frequencyF = info.Frequency;
+
             // Special drown effect, won't probably be used, but it's cool:
-            Bass.ChannelSlideAttribute(streamAudio[streamFrom], ChannelAttribute.Frequency, 0, audioFadeDuration);
-            Bass.ChannelSlideAttribute(streamAudio[streamFrom], ChannelAttribute.Volume, 0, audioFadeDuration / 2);
+            // Bass.ChannelSlideAttribute(streamAudio[streamFrom], ChannelAttribute.Frequency, frequencyF / 1.5f, audioFadeDuration);
+            Bass.ChannelSlideAttribute(streamAudio[streamFrom], ChannelAttribute.Volume, 0, audioFadeDuration);
             
             int lockStreamFrom = streamAudio[streamFrom];
 
@@ -59,6 +62,13 @@ public static class Program {
         Bass.StreamFree(stream);
         return (float)length;
     }
+
+    public static void SetAudioPosition(float position) {
+        int stream = streamSwitch ? 0 : 1;
+        // convert from bytes to seconds
+        long pos = Bass.ChannelSeconds2Bytes(streamAudio[stream], position);
+        Bass.ChannelSetPosition(streamAudio[stream], pos);
+    }
     
     public static void Main(string[] args) {
         if (!Bass.Init()) {
@@ -66,12 +76,7 @@ public static class Program {
             return;
         }
 
-            SwapAudio("samples/Playing-God.mp3");
-            SwapAudio("samples/40oz.mp3");
-            Task.Delay(10000).Wait();
-            // Task.Delay((int)(GetAudioLength("samples/40oz.mp3") * 1000) - audioFadeDuration).Wait();
-            Task.Delay(1500).Wait();
-
+        SwapAudio("samples/Into-The-Night.mp3");
         Console.ReadKey();
     }
 }

@@ -9,15 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BASS.NET" Version="1.0.0" />
-    <PackageReference Include="cscore" Version="1.2.1.2" />
     <PackageReference Include="ManagedBass" Version="3.1.1" />
-    <PackageReference Include="managedbass.asio" Version="3.1.1" />
-    <PackageReference Include="ManagedBass.Enc" Version="3.1.1" />
     <PackageReference Include="ManagedBass.Fx" Version="3.1.1" />
-    <PackageReference Include="naudio" Version="2.1.0" />
-    <PackageReference Include="opentk" Version="4.7.7" />
-    <PackageReference Include="portaudiosharp" Version="0.3.0" />
   </ItemGroup>
 
 </Project>
