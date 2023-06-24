@@ -21,10 +21,12 @@ public static class Program {
         if (streamFrom != -1) {
             Bass.ChannelSlideAttribute(streamAudio[streamFrom], ChannelAttribute.Volume, 0, audioFadeDuration);
             
-            Task.Run(async () => {
+            int lockStreamFrom = streamAudio[streamFrom];
+
+            _ = Task.Run(async () => {
                 await Task.Delay(audioFadeDuration);
-                Bass.ChannelStop(streamAudio[streamFrom]);
-                Bass.StreamFree(streamAudio[streamFrom]);
+                Bass.ChannelStop(lockStreamFrom);
+                Bass.StreamFree(lockStreamFrom);
             });
         }
 
@@ -47,8 +49,6 @@ public static class Program {
         Thread.Sleep(3000);
 
         SwapAudio(pathB);
-
-        Thread.Sleep(3000);
 
         Console.WriteLine("Press any key to exit");
         Console.ReadKey(true);
