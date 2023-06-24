@@ -54,6 +54,19 @@
           "lib/netstandard1.4/ManagedBass.Enc.dll": {}
         }
       },
+      "ManagedBass.Fx/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "ManagedBass": "3.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/ManagedBass.Fx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/ManagedBass.Fx.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging.Abstractions/3.1.4": {
         "type": "package",
         "compile": {
@@ -1650,6 +1663,21 @@
         "lib/netstandard1.4/ManagedBass.Enc.xml",
         "managedbass.enc.3.1.1.nupkg.sha512",
         "managedbass.enc.nuspec"
+      ]
+    },
+    "ManagedBass.Fx/3.1.1": {
+      "sha512": "c9eZPbISPUpsQyWUjoz0nZVhceHrhqF0Z2l96+Id4D9GG4MsSR5CtNV/KmLnNGyODBJElyp9+nFVrPy8N+I10Q==",
+      "type": "package",
+      "path": "managedbass.fx/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/netstandard1.4/ManagedBass.Fx.dll",
+        "lib/netstandard1.4/ManagedBass.Fx.xml",
+        "managedbass.fx.3.1.1.nupkg.sha512",
+        "managedbass.fx.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/3.1.4": {
@@ -5400,6 +5428,7 @@
       "BASS.NET >= 1.0.0",
       "ManagedBass >= 3.1.1",
       "ManagedBass.Enc >= 3.1.1",
+      "ManagedBass.Fx >= 3.1.1",
       "cscore >= 1.2.1.2",
       "managedbass.asio >= 3.1.1",
       "naudio >= 2.1.0",
@@ -5453,6 +5482,10 @@
             "version": "[3.1.1, )"
           },
           "ManagedBass.Enc": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "ManagedBass.Fx": {
             "target": "Package",
             "version": "[3.1.1, )"
           },

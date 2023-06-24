@@ -86,3 +86,4 @@
 /home/nebuladev/Documents/radio/audio/obj/Debug/net6.0/ref/src.dll
 /home/nebuladev/Documents/radio/audio/obj/Debug/net6.0/src.pdb
 /home/nebuladev/Documents/radio/audio/obj/Debug/net6.0/src.genruntimeconfig.cache
+/home/nebuladev/Documents/radio/audio/bin/Debug/net6.0/ManagedBass.Fx.dll

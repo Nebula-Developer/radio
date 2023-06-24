@@ -11,6 +11,7 @@
           "Bass.Net": "1.0.0",
           "ManagedBass": "3.1.1",
           "ManagedBass.Enc": "3.1.1",
+          "ManagedBass.Fx": "3.1.1",
           "CSCore": "1.2.1.2",
           "ManagedBass.Asio": "3.1.1",
           "NAudio": "2.1.0",
@@ -63,6 +64,18 @@
         },
         "runtime": {
           "lib/netstandard1.4/ManagedBass.Enc.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
+          }
+        }
+      },
+      "ManagedBass.Fx/3.1.1": {
+        "dependencies": {
+          "ManagedBass": "3.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.4/ManagedBass.Fx.dll": {
             "assemblyVersion": "3.1.1.0",
             "fileVersion": "3.1.1.0"
           }
@@ -1028,6 +1041,13 @@
       "sha512": "sha512-cShaka7/k4I8tR7L4E1GAqE9esa/aU9lQZ1NCk+vy5T7mRYprSDCW1DtBBXtMysjbLsVmOV5ArZtqV4qjg2nBQ==",
       "path": "managedbass.enc/3.1.1",
       "hashPath": "managedbass.enc.3.1.1.nupkg.sha512"
+    },
+    "ManagedBass.Fx/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c9eZPbISPUpsQyWUjoz0nZVhceHrhqF0Z2l96+Id4D9GG4MsSR5CtNV/KmLnNGyODBJElyp9+nFVrPy8N+I10Q==",
+      "path": "managedbass.fx/3.1.1",
+      "hashPath": "managedbass.fx.3.1.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging.Abstractions/3.1.4": {
       "type": "package",

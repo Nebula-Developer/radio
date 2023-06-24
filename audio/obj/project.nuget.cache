@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pKyIHZ8bN7HVyuWqHhNxTJMcRik4beMa63avS0ngAq8dmCHDinDfg7PR3kaurZdYwGNYjLYlJsgatJLMvjOqbg==",
+  "dgSpecHash": "Xy2lKbpzyro2oAW3Of2jtA5w8yoYsGqQLDgwhYufGgF+Jjipo4gnelwF6s4a9JmgtZnjkDiBbCcEZqWjfS6K6Q==",
   "success": true,
   "projectFilePath": "/home/nebuladev/Documents/radio/audio/src.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/home/nebuladev/.nuget/packages/managedbass/3.1.1/managedbass.3.1.1.nupkg.sha512",
     "/home/nebuladev/.nuget/packages/managedbass.asio/3.1.1/managedbass.asio.3.1.1.nupkg.sha512",
     "/home/nebuladev/.nuget/packages/managedbass.enc/3.1.1/managedbass.enc.3.1.1.nupkg.sha512",
+    "/home/nebuladev/.nuget/packages/managedbass.fx/3.1.1/managedbass.fx.3.1.1.nupkg.sha512",
     "/home/nebuladev/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.4/microsoft.extensions.logging.abstractions.3.1.4.nupkg.sha512",
     "/home/nebuladev/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/home/nebuladev/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
